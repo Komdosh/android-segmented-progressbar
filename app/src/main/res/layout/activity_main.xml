@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:fontFamily="@font/sonsie_one"
+            android:text="@string/application_name"
+            android:textColor="@color/colorTextBlue"
+            android:textSize="@dimen/app_name_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ib_settings"
+            android:layout_width="@dimen/settings_button_size"
+            android:layout_height="@dimen/settings_button_size"
+            android:background="@drawable/background_round_button"
+            android:src="@drawable/ic_settings"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/tv_app_name"
+            app:layout_constraintEnd_toStartOf="@id/tv_app_name"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_app_name" />
+
+        <TextView
+            android:id="@+id/tv_available_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_available_space"
+            android:textColor="@color/colorTextBlue"
+            android:textSize="@dimen/space_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/segment_progress_bar"
+            app:layout_constraintTop_toBottomOf="@id/ib_settings"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/tv_total_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/totalSpace"
+            android:textColor="@color/colorTextBlue"
+            android:textSize="@dimen/space_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/tv_available_space"
+            app:layout_constraintEnd_toStartOf="@id/tv_available_size"
+            app:layout_constraintTop_toTopOf="@id/tv_available_space"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/tv_available_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/availableSpace"
+            android:textColor="@color/colorTextBlue"
+            android:textSize="@dimen/space_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_available_space"
+            app:layout_constraintEnd_toEndOf="@id/segment_progress_bar"
+            app:layout_constraintTop_toTopOf="@id/tv_available_space" />
+
+
+        <ImageView
+            android:id="@+id/iv_video"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/background_red_with_inner_shadow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_video"
+            app:layout_constraintEnd_toStartOf="@id/tv_video"
+            app:layout_constraintTop_toTopOf="@id/tv_video"
+            android:layout_marginEnd="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/legend_text_margin_start"
+            android:text="@string/video"
+            android:textColor="@color/text_color_legend"
+            android:textSize="@dimen/menu_buttons_text_size"
+            app:layout_constraintBottom_toTopOf="@id/iv_photo"
+            app:layout_constraintEnd_toStartOf="@id/iv_other"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/segment_progress_bar" />
+
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/background_yellow_with_inner_shadow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_photo"
+            app:layout_constraintEnd_toStartOf="@id/tv_photo"
+            app:layout_constraintTop_toTopOf="@id/tv_photo"
+            android:layout_marginEnd="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo"
+            android:textColor="@color/text_color_legend"
+            android:textSize="@dimen/menu_buttons_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/menu_top_buttons_guideline"
+            app:layout_constraintStart_toStartOf="@id/tv_video"
+            app:layout_constraintTop_toBottomOf="@id/tv_video" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_legend_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:barrierDirection="left"
+            app:constraint_referenced_ids="iv_other"
+            app:layout_constraintGuide_percent="0.57" />
+
+
+        <ImageView
+            android:id="@+id/iv_other"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/background_blue_with_inner_shadow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_other"
+            app:layout_constraintEnd_toStartOf="@id/tv_other"
+            app:layout_constraintStart_toEndOf="@id/right_legend_barrier"
+            app:layout_constraintTop_toTopOf="@id/tv_other" />
+
+        <TextView
+            android:id="@+id/tv_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/legend_text_margin_start"
+            android:text="@string/other_files"
+            android:textColor="@color/text_color_legend"
+            android:textSize="@dimen/menu_buttons_text_size"
+            app:layout_constraintBottom_toTopOf="@id/tv_system"
+            app:layout_constraintStart_toEndOf="@id/iv_other"
+            app:layout_constraintTop_toBottomOf="@id/segment_progress_bar" />
+
+        <ImageView
+            android:id="@+id/iv_system"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/background_pink_with_inner_shadow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_system"
+            app:layout_constraintStart_toStartOf="@id/right_legend_barrier"
+            app:layout_constraintTop_toTopOf="@id/tv_system" />
+
+        <TextView
+            android:id="@+id/tv_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/legend_text_margin_start"
+            android:text="@string/system"
+            android:textColor="@color/text_color_legend"
+            android:textSize="@dimen/menu_buttons_text_size"
+            app:layout_constraintBottom_toTopOf="@id/menu_top_buttons_guideline"
+            app:layout_constraintStart_toEndOf="@id/iv_system"
+            app:layout_constraintTop_toBottomOf="@id/tv_other" />
+
+
+        <com.example.myapplication.view.SegmentedProgressBar
+            android:id="@+id/segment_progress_bar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/progressbar_height"
+            android:layout_marginTop="@dimen/progressbar_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_size"
+            app:layout_constraintWidth_percent="0.8" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/menu_top_buttons_guideline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.43" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_battery"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/menu_buttons_layout_margin"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/menu_buttons_corner_radius"
+            app:layout_constraintBottom_toBottomOf="@id/menu_bottom_buttons_guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cv_security_check"
+            app:layout_constraintTop_toBottomOf="@id/cv_cpu">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_rounded_with_yellow_gradient">
+
+                <ImageView
+                    android:id="@+id/iv_battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:src="@drawable/ic_battery"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.35" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:clickable="false"
+                    android:text="@string/battery_check"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/menu_buttons_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_battery" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_security_check"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/menu_buttons_layout_margin"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/menu_buttons_corner_radius"
+            app:layout_constraintBottom_toBottomOf="@id/menu_bottom_buttons_guideline"
+            app:layout_constraintEnd_toStartOf="@id/cv_battery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_clean_cache">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_rounded_with_red_gradient">
+
+                <ImageView
+                    android:id="@+id/iv_shield"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:src="@drawable/ic_shield"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.35" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:clickable="false"
+                    android:text="@string/security_check"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/menu_buttons_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_shield" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_cpu"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/menu_buttons_layout_margin"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/menu_buttons_corner_radius"
+            app:layout_constraintBottom_toTopOf="@id/cv_battery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cv_clean_cache"
+            app:layout_constraintTop_toBottomOf="@id/menu_top_buttons_guideline">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_rounded_with_blue_gradient">
+
+                <ImageView
+                    android:id="@+id/iv_cpu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:src="@drawable/ic_cpu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.32" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:clickable="false"
+                    android:gravity="center_horizontal"
+                    android:text="@string/cool_down_processor"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/menu_buttons_text_size"
+                    app:layout_constraintEnd_toEndOf="@id/iv_cpu"
+                    app:layout_constraintStart_toStartOf="@id/iv_cpu"
+                    app:layout_constraintTop_toBottomOf="@id/iv_cpu" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_clean_cache"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/menu_buttons_layout_margin"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/menu_buttons_corner_radius"
+            app:layout_constraintBottom_toTopOf="@id/cv_security_check"
+            app:layout_constraintEnd_toStartOf="@id/cv_cpu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu_top_buttons_guideline">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_rounded_with_pink_gradient">
+
+                <ImageView
+                    android:id="@+id/iv_cache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:src="@drawable/ic_cache"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.35" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:clickable="false"
+                    android:text="@string/clean_cache"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/menu_buttons_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_cache" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/menu_bottom_buttons_guideline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.96" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

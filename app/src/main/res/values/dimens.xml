@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="material_margin">24dp</dimen>
+    <dimen name="settings_button_size">60dp</dimen>
+    <dimen name="settings_icon_size">21dp</dimen>
+
+    <dimen name="segment_progress_bar_margin">42dp</dimen>
+    <dimen name="menu_buttons_corner_radius">11dp</dimen>
+    <dimen name="menu_buttons_layout_margin">32dp</dimen>
+    <dimen name="menu_buttons_text_size">24sp</dimen>
+    <dimen name="space_text_size">12sp</dimen>
+    <dimen name="app_name_text_size">18sp</dimen>
+    <dimen name="progressbar_height">24dp</dimen>
+    <dimen name="progressbar_margin_top">18dp</dimen>
+    <dimen name="legend_text_margin_start">8dp</dimen>
+
+</resources>

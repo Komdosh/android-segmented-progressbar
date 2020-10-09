@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="application_name">AppCleaner</string>
+    <string name="total_available_space">Total / Available space:</string>
+    <string name="battery_check">Battery Check</string>
+    <string name="security_check">Security check</string>
+    <string name="clean_cache">Clean Cache</string>
+    <string name="availableSpace">2.5 Gb</string>
+    <string name="totalSpace">160 Gb / </string>
+    <string name="cool_down_processor">Cool down Processor</string>
+    <string name="other_files">Other Files</string>
+    <string name="system">System</string>
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
+</resources>

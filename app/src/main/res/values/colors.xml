@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorBlue">#1E79A0</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="colorBackground">#EFFAFF</color>
+    <color name="colorTextBlue">@color/colorBlue</color>
+    <color name="colorTextWhite">@color/colorWhite</color>
+    <color name="colorPrimaryDark">#21000000</color>
+    <color name="colorIcon">@color/colorBlue</color>
+    <color name="text_color_legend">#1E79A0</color>
+</resources>
