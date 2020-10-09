@@ -5,7 +5,7 @@
     <string name="battery_check">Battery Check</string>
     <string name="security_check">Security check</string>
     <string name="clean_cache">Clean Cache</string>
-    <string name="availableSpace">2.5 Gb</string>
+    <string name="availableSpace"> 2.5 Gb</string>
     <string name="totalSpace">160 Gb / </string>
     <string name="cool_down_processor">Cool down Processor</string>
     <string name="other_files">Other Files</string>
