@@ -2,6 +2,10 @@
 
 Native implementation of segmented progress bar for android on canvas.
 
+## View Example:
+
+![Segmented Progress Bar](https://github.com/Komdosh/android-segmented-progressbar/blob/master/Screenshot.jpg)
+
 ## Source Code:
 ```kotlin
 class SegmentedProgressBar(context: Context?, attributeSet: AttributeSet? = null) : View(context, attributeSet) {
